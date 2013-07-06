@@ -7,7 +7,7 @@ var index_file = fs.readFileSync('index.html');
 var index_content = index_file.toString();
 console.log(index_content);
 app.get('/', function(request, response) {
-  response.send('Hello World 2!');
+  response.send(index_content);
 });
 
 var port = process.env.PORT || 5000;
